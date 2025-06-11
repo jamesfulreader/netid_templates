@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Access Added Email Generator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>VPN Access Added Email Generator</h1>
+        <p>Enter the NetID that has been added to the VPN access group to generate the confirmation email.</p>
+
+        <form id="emailGenFormVpnAdded" style="margin-bottom: 30px;">
+            <div>
+                <label for="vpnNetIdInput">NetID Added to VPN (e.g., jdoe):</label>
+                <input type="text" id="vpnNetIdInput" name="vpnNetIdInput" required
+                    placeholder="Enter the NetID added to VPN">
+            </div>
+            <button type="button" id="generateEmailBtnVpnAdded" class="action-btn copy-btn"
+                style="width: 100%; padding: 12px; margin-top: 10px;">Generate Email</button>
+        </form>
+
+        <div id="emailPreviewVpnAdded" class="email-template" style="display: none;">
+            <h2>Generated Email</h2>
+            <p><strong>Subject:</strong> <span id="emailSubjectPreviewTextVpnAdded">NetID "<span class="placeholder-red"
+                        id="subjectVpnAddedNetID">NETID_PLACEHOLDER</span>" Added to VPN Access Group</span></p>
+            <div class="copy-buttons-container">
+                <button type="button" class="copy-btn" id="copySubjectBtnVpnAdded">Copy Subject</button>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Body:</strong></p>
+            <pre id="emailBodyPreviewVpnAdded">Hello,
+
+The NetID "<span class="placeholder-red" id="bodyVpnAddedNetID">NETID_PLACEHOLDER</span>" has been added to the VPN access group.  Please wait overnight for processing to finalize before logging in.
+
+To use the VPN, please visit <a href="https://unmvpn.unm.edu/global-protect/login.esp" target="_blank">https://unmvpn.unm.edu/global-protect/login.esp</a> and click on the correct operating system environment to download Global Protect VPN and use unmvpn.unm.edu in the connection information.  Additionally, you may need to send a request to have the installation performed on your workstation, which is completed by another team if you do not have administrative rights to your machine to do so. (Reference FI 7819 <a href="https://unm.custhelp.com/app/answers/detail/a_id/7819" target="_blank">https://unm.custhelp.com/app/answers/detail/a_id/7819</a>)
+
+If you have any questions or concerns, please call the help desk at 505-277-5757, or submit a new ticket at help.unm.edu.
+
+Kind regards,
+IT Applications Support
+</pre>
+            <div class="copy-buttons-container">
+                <button type="button" class="copy-btn" id="copyBodyBtnVpnAdded">Copy Body</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+    </footer>
+
+    <script src="/js/vpnAccessAdded.js" defer></script>
+</body>
+
+</html>

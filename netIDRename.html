@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetID Change Consequences Notification</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>NetID Change Consequences Notification</h1>
+        <p>
+            This email informs the user about the consequences of a NetID change and
+            requires their explicit acceptance.
+        </p>
+
+        <form id="netIdConsequencesForm">
+            <div>
+                <label for="relevantNetID">User's NetID (for technician reference):</label>
+                <input type="text" id="relevantNetID" name="relevantNetID" placeholder="Enter user's NetID" />
+            </div>
+        </form>
+
+        <div class="email-template">
+            <h2>Email Template Preview</h2>
+            <p>
+                <strong>Subject:</strong>
+                <span id="previewSubject">Reply Required: Please accept or decline the consequences of
+                    renaming your UNM NetID</span>
+            </p>
+            <p><strong>Body:</strong></p>
+            <pre id="previewBody">
+Hello,
+
+Changing your UNM NetID can cause access and authentication issues while systems sync. It is a good idea not to make these changes in the middle of a semester or ahead of a critical deadline. In order to change a NetID we require that the consequences are accepted. Users are required to respond with an acknowledgement statement listed at the bottom of this email. Please review this summary and reply with the acknowledgment statement.
+
+UNM NetIDs are used by numerous systems on campus. When NetIDs are changed, many of these systems must be manually updated. Staff and faculty users will lose any Banner roles their previous account held and need to submit a new Banner Access Request.
+
+A reply to this email must be received before IT can continue with your NetID rename request. Please confirm the following:
+
+I understand that if the request to change my UNM NetID is approved, I will be responsible for doing the following, if necessary:
+
+*   If I have Banner and/or other administrative system access, I will lose that access when the NetID is changed and will need to submit a new Banner Authorization Request under the new NetID. I will not be able to use the various services until the new BAR is approved.
+*   If I have email stored in LoboMail or files stored in my UNIX space, I will be responsible for moving the data if I want to keep the information.
+*   If I want mail forwarded from my old email account to my new email account, I will be responsible for setting up those forwarding rules. I can do this by checking Help in LoboMail.
+
+Additionally, if I have access to any of the following services, I understand what will happen when the NetID is changed:
+
+RESEARCH
+
+*   Streamlyne Research Administration Portal (Please let us know if you have a Streamlyne account so we can update your NetID in that system to avoid loss of use)
+
+ENROLLMENT MANAGEMENT
+
+*   STARRS (Access lost until update)
+*   RightNow (Access lost until update)
+*   Hobsons (Access lost until update)
+*   local file/print servers (Access lost until update)
+
+FINANCE
+
+*   Approval queue maintenance is required if the person is an approver.
+*   Banner ID for financial managers must be changed.
+*   Users who reallocate p-card transactions have to work separately with the Purchasing Department to get their information updated.
+*   Incomplete transactions cannot be completed with the old Netid.
+
+Help.UNM
+
+*   Will have submissions under old NetID and new NetID. Due to system limitations will not be able to combine the two records.
+
+TIMEKEEPERS
+
+*   Change can only be done after time has been extracted and payroll closes.
+*   Proxies will need to be updated for new NetID
+
+To show you have reviewed this information and understand the consequences of changing your NetID, <span class="important-note">you MUST reply to this email with the following exact statement:</span>
+
+<span class="acceptance-phrase">"I understand the consequences of changing my NetID".</span>
+
+We appreciate your assistance. To ensure timely processing of your ticket, please respond within five days. Please note, if we do not hear from you within five days (i.e., you decline by not responding or explicitly state your decline), your request will be marked cancelled.
+
+Kind regards,
+UNM IT Applications
+</pre>
+            <div class="copy-buttons-container">
+                <button type="button" id="copySubjectBtn" class="copy-btn">
+                    Copy Subject
+                </button>
+                <button type="button" id="copyBodyBtn" class="copy-btn">
+                    Copy Body
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+    </footer>
+
+    <script src="/js/netIDRenameConsequences.js" defer></script>
+</body>
+
+</html>

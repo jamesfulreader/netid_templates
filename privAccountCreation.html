@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privilege Account Email Generator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Privilege Account Creation Email Generator</h1>
+        <p>Enter the details of the created privilege account to generate the confirmation email for the customer.</p>
+
+        <form id="emailGenFormPriv" style="margin-bottom: 30px;">
+            <div>
+                <label for="privNetIdInput">Privilege Account NetID (e.g., jdoeorgpriv):</label>
+                <input type="text" id="privNetIdInput" name="privNetIdInput" required
+                    placeholder="Enter the created privilege NetID">
+            </div>
+            <div>
+                <label for="fullNameInput">Account Holder's Full Name (e.g., Jane Doe):</label>
+                <input type="text" id="fullNameInput" name="fullNameInput" required
+                    placeholder="Enter Firstname Lastname">
+            </div>
+            <button type="button" id="generateEmailBtnPriv" class="action-btn copy-btn"
+                style="width: 100%; padding: 12px; margin-top: 10px;">Generate Email</button>
+        </form>
+
+        <div id="emailPreviewPriv" class="email-template" style="display: none;">
+            <h2>Generated Email</h2>
+            <p><strong>Subject:</strong> <span id="emailSubjectPreviewTextPriv">Confirmation of new personal privilege
+                    account creation</span></p>
+            <div class="copy-buttons-container">
+                <button type="button" class="copy-btn" id="copySubjectBtnPriv">Copy Subject</button>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Body:</strong></p>
+            <pre id="emailBodyPreviewPriv">Hello,
+
+We have created new personal privilege account "<span class="placeholder-red" id="emailBodyPrivNetID">PRIV_NETID_PLACEHOLDER</span>" (Privileged for <span class="placeholder-red" id="emailBodyFullName">FULL_NAME_PLACEHOLDER</span>).
+
+The expiration date for the account is set to 3 years from today, and a renewal will be required every 3 years to keep the account active.
+
+If the user will need DUO Multifactor Authentication for any of their duties Duo MFA signup can be initiated by the priv account holder per the instructions in <a href="https://unm.custhelp.com/app/answers/detail/a_id/7842/kw/DUO%20enrollment" target="_blank">https://unm.custhelp.com/app/answers/detail/a_id/7842/kw/DUO%20enrollment</a>.
+
+To finalize the account setup, please have the user/owner of the account call the Service Desk at 505-277-5757 to request a password reset. Privileged NetIDs are always solely owned and used by the individual they are named after.
+
+Kind regards,
+UNM IT Applications - Support
+</pre>
+            <div class="copy-buttons-container">
+                <button type="button" class="copy-btn" id="copyBodyBtnPriv">Copy Body</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+    </footer>
+
+    <script src="/js/privAccountCreation.js" defer></script>
+</body>
+
+</html>

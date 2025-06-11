@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New UNM Dept or Club Website Email Generator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>New UNM Dept or Club Website Email Generator</h1>
+        <p>Enter the details of the created NetID and website to generate the confirmation email for the customer.</p>
+
+        <form id="emailGenForm" style="margin-bottom: 30px;">
+            <div>
+                <label for="netIdInput">NetID (e.g., example):</label>
+                <input type="text" id="netIdInput" name="netIdInput" required
+                    placeholder="Enter the created NetID (case-insensitive)">
+            </div>
+            <div>
+                <label for="websiteUrlInput">Website URL (e.g., example.unm.edu):</label>
+                <input type="text" id="websiteUrlInput" name="websiteUrlInput" required
+                    placeholder="Enter domain, e.g., mydept.unm.edu">
+            </div>
+            <button type="button" id="generateEmailBtn" class="action-btn copy-btn"
+                style="width: 100%; padding: 12px; margin-top: 10px;">Generate Email</button>
+        </form>
+
+        <div id="emailPreview" class="email-template" style="display: none;">
+            <h2>Generated Email</h2>
+            <p><strong>Subject:</strong> <span id="emailSubjectPreviewText">New Departmental Email & cPanel Account
+                    Instructions for "<span class="placeholder-netid"
+                        id="previewNetIdSubject">NETID_PLACEHOLDER</span>"</span></p>
+            <div class="copy-buttons-container">
+                <button type="button" class="copy-btn" id="copySubjectBtn">Copy Subject</button>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Body:</strong></p>
+            <pre id="emailBodyPreview">Hello,
+
+Your requested Department NetID, "<span class="placeholder-netid" id="emailBodyNetID">NETID_PLACEHOLDER</span>", has been created with the owner(s) as requested. The expiration date for the account has been set to 3 years from today. You should receive notification when it is time to renew your account.
+
+The email account, "<span class="placeholder-netid" id="emailBodyNetIDEmail">NETID_PLACEHOLDER</span>@unm.edu", has been created as a shared mailbox. You may already have access in your regular Outlook (desktop or web), or you may need to allow 1-2 days processing time to be able to access the account. Because this is a shared mailbox, there is no need for a password to access the mail account. If you need to access the account on Outlook for the Web (Lobomail) please follow this guide:
+
+<a href="https://support.microsoft.com/en-us/office/open-and-use-a-shared-mailbox-in-outlook-on-the-web-98b5a90d-4e38-415d-a030-f09a4cd28207" target="_blank">https://support.microsoft.com/en-us/office/open-and-use-a-shared-mailbox-in-outlook-on-the-web-98b5a90d-4e38-415d-a030-f09a4cd28207</a>
+
+Additionally, the shared mailbox owner/existing delegates can add or remove access for other users with this Flow: <a href="https://make.powerautomate.com/environments/Default-25aa9830-e0f9-482b-897e-1a3b3c855e5c/flows/b671e3bc-153f-400c-a87d-f1e1c9908f29/run" target="_blank">https://make.powerautomate.com/environments/Default-25aa9830-e0f9-482b-897e-1a3b3c855e5c/flows/b671e3bc-153f-400c-a87d-f1e1c9908f29/run</a>
+
+<b>cPanel Account Details:</b>
+
+Username: <span class="placeholder-netid" id="emailBodyCpanelUser">NETID_PLACEHOLDER</span>
+cPanel management URL:  <a href="https://cpanel03.unm.edu:2083/" target="_blank">https://cpanel03.unm.edu:2083/</a>
+Your new Website URL: <span id="emailBodyDomain" class="placeholder-netid">DOMAIN_PLACEHOLDER.unm.edu</span>
+
+It may take up to 2 business days for your URL <span id="emailBodyDomain2" class="placeholder-netid">DOMAIN_PLACEHOLDER.unm.edu</span> to be accessible in a browser - when it is, you will see a blank "Index of /" page, the site is ready for you to start making content updates.
+
+<b>Login to cPanel and change your cPanel hosting account password:</b>
+
+Refer to this Fast Info: <a href="https://unm.custhelp.com/app/answers/detail/a_id/7762/" target="_blank">https://unm.custhelp.com/app/answers/detail/a_id/7762/</a>
+
+A shared mailbox/email account has been created with your Department NetID.  You should already have access to that in your regular Outlook (desktop or web).  The password reset code will be sent to this shared mailbox which will be needed in order to reset the cPanel password.
+
+<b>Develop your website content:</b>
+
+Cascade Server, UNM's Web Content Management system (WCMS), is highly recommended.  Each individual who wishes to use the WCMS will need to complete training. You can request Cascade access from the UNM Webmaster.  Cascade Server and cPanel work hand in hand to deliver your website to your audience. Use Cascade to build your website (develop content). Use cPanel to serve (host) the website you built in Cascade. Once your site is built in Cascade, configure it to publish to your cPanel account using FastInfo 7497.
+
+Thank you,
+UNM IT Applications - Support
+</pre>
+            <div class="copy-buttons-container">
+                <button type="button" class="copy-btn" id="copyBodyBtn">Copy Body</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+    </footer>
+
+    <script src="/js/deptNetIDWebsite.js" defer></script>
+</body>
+
+</html>

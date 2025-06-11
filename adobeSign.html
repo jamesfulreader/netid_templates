@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adobe Sign Account Update Notification</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Adobe Sign Account Update Notification</h1>
+        <p>
+            Enter the user's email below to generate the Adobe Sign update
+            notification.
+        </p>
+
+        <form id="adobeSignUpdateForm">
+            <div>
+                <label for="userEmail">Email Associated with Sign Account Updated?:</label>
+                <input type="email" id="userEmail" name="userEmail" placeholder="EXAMPLENETID@unm.edu" required />
+            </div>
+            <!-- "Prepare Notification Alert" button removed -->
+        </form>
+
+        <div class="email-template">
+            <h2>Email Template Preview</h2>
+            <p>
+                <strong>Subject:</strong> Adobe Acrobat Sign Account Update for "<span
+                    id="previewUserEmailSubject">EXAMPLENETID@unm.edu</span>"
+            </p>
+            <p><strong>Body:</strong></p>
+            <pre id="previewAdobeBody">
+Hello,
+
+We have updated and licensed the Adobe Acrobat Sign account associated with "<span class="placeholder-useremail">EXAMPLENETID@unm.edu</span>". Adobe Sign may be accessed from adobesign.unm.edu.
+
+UNM Adobe services are now utilizing SSO authentication. This means if you are a user of a shared/departmental Adobe account, accessing will require the use of an incognito or private browser window. Please follow the steps in FastInfo article 7801 if you have any issues accessing a departmental Adobe Sign account: <a href="https://unm.custhelp.com/app/answers/detail/a_id/7801/kw/Adobe%20Sign" target="_blank">https://unm.custhelp.com/app/answers/detail/a_id/7801/kw/Adobe%20Sign</a>
+
+Here is a tutorial video that covers some of the basic functionality in the new Sign portal: <a href="https://experienceleague.adobe.com/en/docs/document-cloud-learn/sign-learning-hub/getting-started/getting-started-sending/new-sender" target="_blank">https://experienceleague.adobe.com/en/docs/document-cloud-learn/sign-learning-hub/getting-started/getting-started-sending/new-sender</a>
+
+The full Adobe Acrobat Sign User's Guide may be accessed here: <a href="https://helpx.adobe.com/sign/using/user-guide-landing.html" target="_blank">https://helpx.adobe.com/sign/using/user-guide-landing.html</a>
+
+Kind regards,
+UNM IT Applications Teams
+</pre>
+            <div class="copy-buttons-container">
+                <button type="button" id="copyAdobeSubjectBtn" class="copy-btn">
+                    Copy Subject
+                </button>
+                <button type="button" id="copyAdobeBodyBtn" class="copy-btn">
+                    Copy Body
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+    </footer>
+
+    <script src="/js/adobeSign.js" defer></script>
+</body>
+
+</html>

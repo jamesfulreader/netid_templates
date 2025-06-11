@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetID Renewal Notification</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>NetID Renewal Notification</h1>
+        <p>
+            Enter the NetID below to generate the renewal notification content.
+        </p>
+
+        <form id="netIdRenewalForm">
+            <div>
+                <label for="netID">Input Renewed NetID (NetID only):</label>
+                <input type="text" id="netID" name="netID" placeholder="NetID" required />
+            </div>
+            <!-- "Prepare Notification Alert" button removed -->
+        </form>
+
+        <div class="email-template">
+            <h2>Email Template Preview</h2>
+            <p>
+                <strong>Subject:</strong> Notice that NetID
+                <span id="previewNetIdSubject">EXAMPLE</span> has been renewed
+            </p>
+            <p><strong>Body:</strong></p>
+            <pre id="previewNetIdBody">
+Hello,
+
+NetID <span class="placeholder-netid">EXAMPLE</span> has been renewed for three more years.
+
+Kind regards,
+UNM IT Applications
+</pre>
+            <div class="copy-buttons-container">
+                <button type="button" id="copyNetIdSubjectBtn" class="copy-btn">
+                    Copy Subject
+                </button>
+                <button type="button" id="copyNetIdBodyBtn" class="copy-btn">
+                    Copy Body
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+    </footer>
+
+    <script src="/js/netIDRenewal.js" defer></script>
+</body>
+
+</html>

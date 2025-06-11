@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetID Rename Confirmation</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>NetID Rename Confirmation</h1>
+    <p>
+      Enter the old and new NetIDs to generate the confirmation email.
+    </p>
+
+    <form id="netIdRenameConfirmForm">
+      <div class="input-group">
+        <div>
+          <label for="oldNetID"><span class="label-icon">💀</span>Old NetID:</label>
+          <input type="text" id="oldNetID" name="oldNetID" placeholder="OLDexample" required />
+        </div>
+        <div>
+          <label for="newNetID"><span class="label-icon">😇</span>New NetID:</label>
+          <input type="text" id="newNetID" name="newNetID" placeholder="NEWexample" required />
+        </div>
+      </div>
+    </form>
+
+    <div class="email-template">
+      <h2>Email Template Preview</h2>
+      <p>
+        <strong>Subject:</strong>
+        <span id="previewSubject">Confirmation of NetID rename from
+          <span class="placeholder-oldnetid">OLDexample</span> to
+          <span class="placeholder-newnetid">NEWexample</span></span>
+      </p>
+      <p><strong>Body:</strong></p>
+      <pre id="previewBody">
+Hello,
+
+Your official UNM NetID was changed from '<span class="placeholder-oldnetid">OLDexample</span>' to '<span class="placeholder-newnetid">NEWexample</span>'.
+Please note: It will take 24-48 hours to receive emails via your new email address.
+
+As per the Statement of Understanding, you acknowledged the consequences of this change. You may still need to complete one or more actions. Please review the list below.
+(You may also need to request your local system administrator to make other access changes, such as changing your login name on your personal machine).
+
+<b>Key Actions for All Users:</b>
+
+  * <b>Change Temporary Password:</b>
+    - A temporary password for your new NetID can be obtained by contacting the Service Desk at (505) 277-5757.
+    - Change this password at <a href="https://netid.unm.edu" target="_blank">https://netid.unm.edu</a> using the "I know my old password" link.
+    - (FastInfo #2: How to reset/change NetID Password - <a href="https://unm.custhelp.com/app/answers/detail/a_id/2/kw/2" target="_blank">link</a>)
+
+  * <b>Old NetID (<span class="placeholder-oldnetid">OLDexample</span>) Expiration:</b>
+    - Your old NetID has expired.
+    - If you want to keep mail or documents from your old account's UNIX space, you must move them.
+
+  * <b>Set Up New Preferred Email:</b>
+    - Visit <a href="http://dss.unm.edu" target="_blank">dss.unm.edu</a> and remove your old preferred email.
+    - <b>DO NOT</b> enter a new email address; it will be automatically populated.
+
+<span class="section-title">FOR FACULTY AND STAFF:</span>
+
+  * <b>Banner Users:</b>
+    - <b>Action:</b> Resubmit your Banner Authorization Request (BAR) under your new NetID (<span class="placeholder-newnetid">NEWexample</span>) once you receive notice your roles have been removed from the old NetID.
+    - Our current system does not allow us to simply replace the old NetID with the new one for Banner access.
+    - You should receive notice from a Business Security Administrator when your Banner access has been removed from the old NetID.
+    - (FastInfo #1586: How to complete a BAR - <a href="https://unm.custhelp.com/app/answers/detail/a_id/1586/kw/1586" target="_blank">link</a>)
+
+  * <b>PCard Holders:</b>
+    - <b>Action:</b> Submit a "Modification of Cardholder Information Form" to update your NetID.
+    - More information: <a href="http://www.unm.edu/~purch/pcard.html" target="_blank">UNM Purchasing P-Card</a>
+
+  * <b>Proxies in Banner:</b>
+    - You will need to update proxies once the BAR for your new NetID has been approved.
+
+  * <b>System Access & Update Timelines:</b>
+    - <b>Learning Central:</b> Access with new NetID should be immediate.
+    - <b>MyUNM:</b> Access with new NetID will be available the following day.
+    - <b>LoboWeb:</b> Access with new NetID should be immediate. (Use links on the MyUNM login page before logging in).
+    - <b>Listservs:</b> IT will change ownership if your old UNM NetID was the primary email address.
+    - <b>Help.UNM:</b>
+      - Allow 24+ hours before logging in with your new NetID.
+      - Old and current tickets will remain under your old NetID (<span class="placeholder-oldnetid">OLDexample</span>).
+      - Accounts cannot be merged due to system limitations.
+    - <b>Learn:</b>
+      - Allow up to two business days for the new NetID to work.
+      - Access may still work under the old NetID during part of this period.
+    - <b>LoboMail:</b> Will take about 4 hours to become active.
+    - <b>IT VPN and other UNIX group membership:</b> Will be changed once you receive this email.
+    - <b>LoboTime:</b> Will be accessible immediately.
+
+We will proceed with escalating this request so that your email address can be properly updated.
+
+Please contact the Service Desk at (505) 277-5757 if you have any questions.
+
+Best regards,
+UNM IT Applications
+</pre>
+      <div class="copy-buttons-container">
+        <button type="button" id="copySubjectBtn" class="copy-btn">
+          Copy Subject
+        </button>
+        <button type="button" id="copyBodyBtn" class="copy-btn">
+          Copy Body
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+  </footer>
+  <script src="/js/netIDRenameConfirmation.js" defer></script>
+</body>
+
+</html>
