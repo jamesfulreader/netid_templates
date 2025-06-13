@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamlyne - External User: Licensing Instructions</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Streamlyne - External User: Licensing Instructions</h1>
+    <p>Enter the name and login email for the external user to generate the welcome message.</p>
+
+    <form id="streamlyneExternalForm" style="margin-bottom: 30px;">
+      <div>
+        <label for="externalFullName">Full Name:</label>
+        <input type="text" id="externalFullName" name="externalFullName" placeholder="Firstname Lastname" required />
+      </div>
+      <div>
+        <label for="externalEmail">Streamlyne Login Email:</label>
+        <input type="email" id="externalEmail" name="externalEmail" placeholder="example@domain.com" required />
+      </div>
+      <button type="button" id="generateEmailExternal" class="copy-btn" style="width: 100%; padding: 12px;">Generate Email</button>
+    </form>
+
+    <div id="emailPreviewExternal" class="email-template" style="display: none;">
+      <h2>Generated Email</h2>
+      <p><strong>Subject:</strong> <span id="subjectExternal">Streamlyne New User Instructions</span></p>
+      <div class="copy-buttons-container">
+        <button type="button" class="copy-btn" id="copySubjectExternal">Copy Subject</button>
+      </div>
+      <p><strong>Body:</strong></p>
+      <pre id="emailBodyExternal">
+Hello <span class="placeholder-red" id="nameExternal">NAME_PLACEHOLDER</span>,
+
+We have created a Streamlyne account with login <span class="placeholder-red" id="emailExternal">EMAIL_PLACEHOLDER</span>. This account has the required permissions to submit COI disclosures and IRB proposals, at a minimum.
+
+If your Streamlyne login is not an @unm.edu address, please log in to Streamlyne via the "Login For Other Users" option at https://research.unm.streamlyne.org.
+
+You will need to follow the "Forgot Password" option using your email to set your password for the initial login. Salud/HSC email users will also use the "Login For Other Users" login button.
+
+Streamlyne support services, training videos, and user guides may be found at:
+https://streamlyne.unm.edu/resources/index.html
+
+Kind regards,
+UNM IT Applications - Accounts and Support
+</pre>
+      <div class="copy-buttons-container">
+        <button type="button" class="copy-btn" id="copyBodyExternal">Copy Body</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+  </footer>
+
+  <script>
+    document.getElementById("generateEmailExternal").addEventListener("click", function () {
+      const name = document.getElementById("externalFullName").value.trim();
+      const email = document.getElementById("externalEmail").value.trim();
+
+      if (!name || !email) {
+        alert("Please enter both name and login email.");
+        return;
+      }
+
+      document.getElementById("nameExternal").textContent = name;
+      document.getElementById("emailExternal").textContent = email;
+      document.getElementById("emailPreviewExternal").style.display = "block";
+    });
+
+    document.getElementById("copyBodyExternal").addEventListener("click", function () {
+      const bodyText = document.getElementById("emailBodyExternal").innerText;
+      navigator.clipboard.writeText(bodyText).then(() => alert("Body copied to clipboard!"));
+    });
+
+    document.getElementById("copySubjectExternal").addEventListener("click", function () {
+      const subjectText = document.getElementById("subjectExternal").innerText;
+      navigator.clipboard.writeText(subjectText).then(() => alert("Subject copied to clipboard!"));
+    });
+  </script>
+</body>
+</html>

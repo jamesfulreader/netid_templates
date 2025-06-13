@@ -4,26 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetID Disabled Email Generator</title>
+    <title>NetID - Status Change: Disabled Notice</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>NetID Disabled Confirmation Email Generator</h1>
+        <h1>NetID - Status Change: Disabled Notice</h1>
         <p>Enter the NetID that has been disabled to generate the confirmation email.</p>
-
         <form id="emailGenFormDisabled" style="margin-bottom: 30px;">
             <div>
                 <label for="disabledNetIdInput">NetID that was disabled (e.g., jdoe):</label>
                 <input type="text" id="disabledNetIdInput" name="disabledNetIdInput" required
                     placeholder="Enter the disabled NetID">
             </div>
-            <button type="button" id="generateEmailBtnDisabled" class="action-btn copy-btn"
-                style="width: 100%; padding: 12px; margin-top: 10px;">Generate Email</button>
-        </form>
 
-        <div id="emailPreviewDisabled" class="email-template" style="display: none;">
+        </form>
+        <div id="emailPreviewDisabled" class="email-template" style="display: block;">
             <h2>Generated Email</h2>
             <p><strong>Subject:</strong> <span id="emailSubjectPreviewTextDisabled">Notice that NetID "<span
                         class="placeholder-red" id="subjectDisabledNetID">NETID_PLACEHOLDER</span>" has been
@@ -31,26 +28,23 @@
             <div class="copy-buttons-container">
                 <button type="button" class="copy-btn" id="copySubjectBtnDisabled">Copy Subject</button>
             </div>
-
             <p style="margin-top: 20px;"><strong>Body:</strong></p>
             <pre id="emailBodyPreviewDisabled">Hello,
 
 NetID "<span class="placeholder-red" id="bodyDisabledNetID">NETID_PLACEHOLDER</span>" has been disabled per your request, effective immediately.
 
 Kind regards,
-UNM IT Applications
-</pre>
+UNM IT Applications</pre>
             <div class="copy-buttons-container">
                 <button type="button" class="copy-btn" id="copyBodyBtnDisabled">Copy Body</button>
             </div>
         </div>
     </div>
-
     <footer>
         <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
     </footer>
-
     <script src="/js/netidDisabled.js" defer></script>
+
 </body>
 
 </html>

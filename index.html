@@ -2,6 +2,151 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNM IT Template Directory</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            background-color: var(--base);
+            color: var(--text);
+        }
+
+        h1 {
+            color: #d00000;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 0.2em;
+        }
+
+        .character-pair {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 2em auto;
+            max-width: 700px;
+        }
+
+        .character-pair img {
+            width: 120px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .character-pair img:hover {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .grid-sections {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2em;
+        }
+
+        .template-list {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .template-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .template-list li {
+            background-color: var(--surface0);
+            margin-bottom: 12px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .template-list li:hover {
+            transform: scale(1.02);
+        }
+
+        .template-list a {
+            display: block;
+            padding: 15px;
+            color: var(--blue);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .template-list a:hover {
+            color: var(--green);
+        }
+
+        h2.section-header {
+            color: var(--mauve);
+            border-bottom: 2px solid var(--surface1);
+            padding-bottom: 8px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 3em;
+            text-align: center;
+            color: var(--subtext0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container wide">
+        <h1>UNM</h1>
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 10px; color: var(--subtext1);">
+            Welcome to the UNM IT Template Directory — featuring friendly chaos and operational clarity.
+        </p>
+
+        <div class="character-pair">
+            <img src="/assets/glider.png" alt="Cyberpunk Sugar Glider" title="Silent guardian of the templates">
+            <img src="/assets/iguana.png" alt="Sly Iguana" title="Up to something, probably">
+        </div>
+
+        <div class="grid-sections">
+            <div class="template-list">
+                <h2 class="section-header">NetID-Related Templates</h2>
+                <ul>
+                    <li><a href="netIDRenewal.html">NetID - Renewal: Notification</a></li>
+                    <li><a href="privAccountCreation.html">Priv Account - Creation: Confirmation</a></li>
+                    <li><a href="netIDDisabled.html">NetID - Status Change: Disabled Notice</a></li>
+                    <li><a href="netIDRename.html">NetID - Rename Step 1: Consequences Notification</a></li>
+                    <li><a href="netIDRename2.html">NetID - Rename Step 2: Confirmation Email</a></li>
+                </ul>
+            </div>
+
+            <div class="template-list">
+                <h2 class="section-header">Other IT Support Templates</h2>
+                <ul>
+                    <li><a href="adobeSign.html">Adobe Sign - Update: Account Notification</a></li>
+                    <li><a href="streamlyneInternalUser.html">Streamlyne - Internal User: Licensing Instructions</a>
+                    </li>
+                    <li><a href="streamlyneExternalUser.html">Streamlyne - External User: Licensing Instructions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--subtext0);">
+            More templates and creatures will appear soon...
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+    </footer>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UNM IT Email Template Hub</title>
@@ -43,18 +188,18 @@
                     <a href="vpnAccessAdded.html">VPN Access Added Confirmation Email</a>
                 </li>
                 <!-- Add more links here as you create more pages -->
-            </ul>
-        </nav>
+<!-- </ul>
+</nav>
 
-        <p style="margin-top: 30px; font-style: italic; text-align: center">
-            This hub provides quick access to standardized email templates for
-            common IT support scenarios.
-        </p>
-    </div>
+<p style="margin-top: 30px; font-style: italic; text-align: center">
+    This hub provides quick access to standardized email templates for
+    common IT support scenarios.
+</p>
+</div>
 
-    <footer>
-        <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+</footer>
 </body>
 
-</html>
+</html> -->

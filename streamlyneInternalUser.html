@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamlyne - Internal User: Licensing Instructions</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Streamlyne - Internal User: Licensing Instructions</h1>
+    <p>Enter the name and email address of the new internal user to generate a welcome message.</p>
+
+    <form id="streamlyneInternalForm" style="margin-bottom: 30px;">
+      <div>
+        <label for="internalFullName">Full Name:</label>
+        <input type="text" id="internalFullName" name="internalFullName" placeholder="Firstname Lastname" required />
+      </div>
+      <div>
+        <label for="internalEmail">Email Address:</label>
+        <input type="email" id="internalEmail" name="internalEmail" placeholder="user@unm.edu" required />
+      </div>
+      <button type="button" id="generateEmailInternal" class="copy-btn" style="width: 100%; padding: 12px;">Generate Email</button>
+    </form>
+
+    <div id="emailPreviewInternal" class="email-template" style="display: none;">
+      <h2>Generated Email</h2>
+      <p><strong>Subject:</strong> <span id="subjectInternal">Streamlyne New User Instructions</span></p>
+      <div class="copy-buttons-container">
+        <button type="button" class="copy-btn" id="copySubjectInternal">Copy Subject</button>
+      </div>
+      <p><strong>Body:</strong></p>
+      <pre id="emailBodyInternal">
+Hello <span class="placeholder-red" id="nameInternal">NAME_PLACEHOLDER</span>,
+
+We have created a Streamlyne account with login "<span class="placeholder-red" id="emailInternal">EMAIL_PLACEHOLDER</span>". This account has the required permissions to submit COI disclosures and IRB proposals, at a minimum.
+
+If you are internal to UNM and you used your unm.edu email as your login email for Streamlyne, please use the "University of New Mexico User Login" at:
+https://research.unm.streamlyne.org
+
+Please select the "Forgot Password" option using the email you provided as your login name so that you will be prompted to set your own unique password.
+
+Streamlyne support services, training videos, and user guides may be found at:
+https://streamlyne.unm.edu/resources/index.html
+
+Kind regards,
+UNM IT Applications - Accounts and Support
+</pre>
+      <div class="copy-buttons-container">
+        <button type="button" class="copy-btn" id="copyBodyInternal">Copy Body</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Apps Support James Fulreader and Devon Brown</p>
+  </footer>
+
+  <script>
+    document.getElementById("generateEmailInternal").addEventListener("click", function () {
+      const name = document.getElementById("internalFullName").value.trim();
+      const email = document.getElementById("internalEmail").value.trim();
+
+      if (!name || !email) {
+        alert("Please enter both name and email address.");
+        return;
+      }
+
+      document.getElementById("nameInternal").textContent = name;
+      document.getElementById("emailInternal").textContent = email;
+      document.getElementById("emailPreviewInternal").style.display = "block";
+    });
+
+    document.getElementById("copyBodyInternal").addEventListener("click", function () {
+      const bodyText = document.getElementById("emailBodyInternal").innerText;
+      navigator.clipboard.writeText(bodyText).then(() => alert("Body copied to clipboard!"));
+    });
+
+    document.getElementById("copySubjectInternal").addEventListener("click", function () {
+      const subjectText = document.getElementById("subjectInternal").innerText;
+      navigator.clipboard.writeText(subjectText).then(() => alert("Subject copied to clipboard!"));
+    });
+  </script>
+</body>
+</html>
