@@ -92,7 +92,7 @@ Key Actions for All Users:
   * Change Temporary Password:
     - A temporary password for your new NetID can be obtained by contacting the Service Desk at (505) 277-5757.
     - Change this password at https://netid.unm.edu using the "I know my old password" link.
-    - (FastInfo #2: How to reset/change NetID Password - https://unm.custhelp.com/app/answers/detail/a_id/2/kw/2)
+    - (How to reset/change NetID Password - https://unm.service-now.com/esc?id=kb_article&table=kb_knowledge&sys_id=63f336e42b19e6506fcbfcddfe91bff1&recordUrl=%2Fkb_view.do%3Fsys_kb_id%3D63f336e42b19e6506fcbfcddfe91bff1)
 
   * Old NetID (${oldNetId}) Expiration:
     - Your old NetID has expired.
@@ -108,7 +108,7 @@ FOR FACULTY AND STAFF:
     - Action: Resubmit your Banner Authorization Request (BAR) under your new NetID (${newNetId}) once you receive notice your roles have been removed from the old NetID.
     - Our current system does not allow us to simply replace the old NetID with the new one for Banner access.
     - You should receive notice from a Business Security Administrator when your Banner access has been removed from the old NetID.
-    - (FastInfo #1586: How to complete a BAR - https://unm.custhelp.com/app/answers/detail/a_id/1586/kw/1586)
+    - (How to complete a BAR - https://unm.service-now.com/esc?id=kb_article&table=kb_knowledge&sysparm_article=KB0015549&searchTerm=How%20to%20submit%20a%20bar)
 
   * PCard Holders:
     - Action: Submit a "Modification of Cardholder Information Form" to update your NetID.
